@@ -67,6 +67,7 @@ public class CyclicBarrierDemo {
         Thread[] allSoldier = new Thread[N];
         boolean flag = false;
         CyclicBarrier cyclicBarrier = new CyclicBarrier(N,new BarrierRun(flag,N));
+        //CyclicBarrier cyclicBarrier = new CyclicBarrier(N); 如果只是想继续往下走，可以不传入处理线程
         System.out.println("集合队伍！");
         for(int i=0;i<N;i++){
             System.out.println("士兵"+i+"报道！");

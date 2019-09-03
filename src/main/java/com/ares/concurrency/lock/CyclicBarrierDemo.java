@@ -24,8 +24,10 @@ public class CyclicBarrierDemo {
                 dowork();
                 cyclicBarrier.await();//等待所有士兵完成工作
             } catch (InterruptedException e) {
+                //该异常表示当前线程在等待的时候被中断了
                 e.printStackTrace();
             } catch (BrokenBarrierException e) {
+                //该线程表示有其他线程在等待栅栏的时候被中断了，意味着该栅栏已经出现问题，无法正常执行了
                 e.printStackTrace();
             }
 

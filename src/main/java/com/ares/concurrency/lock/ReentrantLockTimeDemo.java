@@ -1,6 +1,7 @@
 package com.ares.concurrency.lock;
 
-import java.util.concurrent.TimeUnit;
+import java.util.Random;
+import java.util.concurrent.*;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -33,5 +34,7 @@ public class ReentrantLockTimeDemo implements Runnable{
         Thread thread1 = new Thread(reentrantLockTimeDemo);
         thread.start();
         thread1.start();
+
+        System.out.println(Runtime.getRuntime().availableProcessors());
     }
 }

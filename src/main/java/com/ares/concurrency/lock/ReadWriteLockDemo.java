@@ -1,4 +1,4 @@
-package main.java.com.ares.concurrency.lock;
+package com.ares.concurrency.lock;
 
 import java.util.Random;
 import java.util.concurrent.locks.Lock;
